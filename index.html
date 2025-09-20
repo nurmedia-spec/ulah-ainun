@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Selamat Ulang Tahun 🎉</title>
+  <style>
+    body {
+      text-align: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    h1 {
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+      margin-top: 40px;
+    }
+    p {
+      font-size: 18px;
+      color: #fff;
+      margin: 15px 0 30px 0;
+    }
+    img {
+      width: 300px;       /* lebar sama */
+      height: 300px;      /* tinggi dipaksa sama */
+      object-fit: cover;  /* biar fotonya tetap proporsional */
+      border-radius: 20px;
+      margin: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background-color: #ff4081;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #e73370;
+      transform: scale(1.05);
+    }
+
+    /* Tambahan untuk animasi kado */
+    #kado {
+      margin-top: 30px;
+      font-size: 80px;
+      cursor: pointer;
+      transition: transform 0.5s;
+    }
+    #kue {
+      display: none;
+      font-size: 100px;
+      margin-top: 20px;
+      animation: muncul 1s ease-out forwards;
+    }
+    @keyframes muncul {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Selamat Ulang Tahun 🎂</h1>
+  <p>Selamat ulang tahun AINUN! Umur boleh nambah, tapi tugas kuliah sama deadline tetep nggak mau berkurang 🤪.</p>
+  <p> TETAP SEMAGATT JANGAN PUTUS ASA,APALAGI PUTUS NAFAS,KARNA PERJALANAN HIDUP MASIH PANJANG WKWKWK </p>
+    <p> btw ftomu sa ambil di Fb 🤪</p>
+
+  <!-- Foto pertama -->
+  <img src="inun 1.jpeg" alt="Foto Pertama">
+
+  <!-- Foto kedua -->
+  <img src="inun 2.jpeg" alt="Foto Kedua">
+
+  <!-- Musik lokal -->
+  <audio id="lagu" loop>
+    <source src="selamat ultah.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Tombol play musik -->
+  <div>
+    <button onclick="playMusik()">🔊 Play Musik</button>
+  </div>
+
+  <!-- Tambahan: Kado -->
+  <div id="kado" onclick="bukaKado()">🎁</div>
+  <div id="kue">🎂✨</div>
+
+  <script>
+    function playMusik() {
+      const audio = document.getElementById("lagu");
+      audio.play();
+    }
+
+    function bukaKado() {
+      document.getElementById("kado").style.display = "none";
+      document.getElementById("kue").style.display = "block";
+    }
+  </script>
+</body>
+</html>
